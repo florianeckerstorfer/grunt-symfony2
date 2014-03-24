@@ -86,6 +86,13 @@ grunt.initConfig({
 });
 ```
 
+## Other "sf_*" tasks
+`grunt_symfony2` contains additional tasks that allow you to quickly execute Symfony2 commands from grunt. Currently
+we support the following commands:
+
+- **sf2_cache_clear**: `cache:clear`
+- **sf2_cache_warmup**: `cache:warmup`
+
 ## Author
 - [Florian Eckerstorfer](http://florian.ec) ([Twitter](http://twitter.com/Florian_), [App.net](http://app.net/florian))
 
