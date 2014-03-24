@@ -55,7 +55,7 @@ Path to console application that you want to use.
 
 ```js
 grunt.initConfig({
-    sf_console: {
+    sf2_console: {
         options: {},
         cache_clear_prod: {
             cmd: 'cache:clear',
@@ -72,7 +72,7 @@ If you want to use a custom binary, you can change the `bin` option.
 
 ```js
 grunt.initConfig({
-    symfony2: {
+    sf2_console: {
         options: {
             bin: 'app/sf2console'
         },
@@ -86,9 +86,27 @@ grunt.initConfig({
 });
 ```
 
+### Environment Auto Detection
+The execution environment of a task can be auto detected based on the target. If the targets name is either `prod`,
+`dev` or `staging` and the `env` argument is not present the task uses the target name as environment.
+
+#### Example
+
+The following task executes automatically in `prod` environment.
+
+```js
+grunt.initConfig({
+    sf2_cache_clear: {
+        options: {},
+        prod: {}
+    }
+});
+```
+
 ## Other "sf_*" tasks
-`grunt_symfony2` contains additional tasks that allow you to quickly execute Symfony2 commands from grunt. Currently
-we support the following commands:
+`grunt_symfony2` contains additional tasks that allow you to quickly execute Symfony2 commands from grunt. The tasks
+work exactly like the `sf2_console` task, you just don't need to provide the `cmd` option. Arguments and auto detection
+of the environment are also supported. Currently we support the following commands:
 
 - **sf2_assetic_dump**: `assetic:dump`
 - **sf2_assets:install**: `assets:install`

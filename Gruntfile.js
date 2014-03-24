@@ -63,6 +63,7 @@ module.exports = function(grunt) {
                     env: 'dev'
                 }
             },
+            prod: {},
             options: {
                 bin: 'test/fixtures/console'
             }

@@ -62,6 +62,15 @@ exports.sf2_console = {
         test.equal(actual, expected, 'should run cache:warmup command with --env=dev option.');
 
         test.done();
+    },
+    cache_warmup_env_prod: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/cache_warmup_env_prod');
+        var expected = grunt.file.read('test/expected/cache_warmup_env_prod');
+        test.equal(actual, expected, 'should run cache:warmup --env=prod when target is "prod".');
+
+        test.done();
     }
 
 };
