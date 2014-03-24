@@ -44,6 +44,24 @@ exports.sf2_console = {
         test.equal(actual, expected, 'should run no command with --version option.');
 
         test.done();
+    },
+    cache_clear_env_dev: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/cache_clear_env_dev');
+        var expected = grunt.file.read('test/expected/cache_clear_env_dev');
+        test.equal(actual, expected, 'should run cache:clear command with --env=dev option.');
+
+        test.done();
+    },
+    cache_warmup_env_dev: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/cache_warmup_env_dev');
+        var expected = grunt.file.read('test/expected/cache_warmup_env_dev');
+        test.equal(actual, expected, 'should run cache:warmup command with --env=dev option.');
+
+        test.done();
     }
 
 };

@@ -46,6 +46,28 @@ module.exports = function(grunt) {
             }
         },
 
+        sf2_cache_clear: {
+            dev: {
+                args: {
+                    env: 'dev'
+                }
+            },
+            options: {
+                bin: 'test/fixtures/console',
+            }
+        },
+
+        sf2_cache_warmup: {
+            dev: {
+                args: {
+                    env: 'dev'
+                }
+            },
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+
         // Unit tests.
         nodeunit: {
             tests: ['test/*_test.js'],
@@ -81,7 +103,7 @@ module.exports = function(grunt) {
 
     // Whenever the "test" task is run, first clean the "tmp" dir, then run this
     // plugin's task(s), then test the result.
-    grunt.registerTask('test', ['clean', 'sf2_console', 'nodeunit', 'jslint']);
+    grunt.registerTask('test', ['clean', 'sf2_console', 'sf2_cache_clear', 'sf2_cache_warmup', 'nodeunit', 'jslint']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', ['jshint', 'test']);
