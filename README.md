@@ -90,8 +90,24 @@ grunt.initConfig({
 `grunt_symfony2` contains additional tasks that allow you to quickly execute Symfony2 commands from grunt. Currently
 we support the following commands:
 
+- **sf2_assetic_dump**: `assetic:dump`
+- **sf2_assets:install**: `assets:install`
 - **sf2_cache_clear**: `cache:clear`
 - **sf2_cache_warmup**: `cache:warmup`
+- **sf2_doctrine_cache_clear_metadata**: `doctrine:cache:clear-metadata`
+- **sf2_doctrine_cache_clear_query**: `doctrine:cache:clear-query`
+- **sf2_doctrine_cache_clear_result**: `doctrine:cache:clear-result`
+- **sf2_doctrine_database_create**: `doctrine:database:create`
+- **sf2_doctrine_database_drop**: `doctrine:database:drop`
+- **sf2_doctrine_ensure_production_settings**: `doctrine:ensure-production-settings`
+- **sf2_doctrine_fixtures_load**: `doctrine:fixtures:load`
+- **sf2_doctrine_schema_create**: `doctrine:schema:create`
+- **sf2_doctrine_schema_drop**: `doctrine:schema:drop`
+- **sf2_doctrine_schema_update**: `doctrine:schema:update`
+- **sf2_doctrine_schema_validate**: `doctrine:schema:validate`
+- **sf2_orm_convert_mapping**: `orm:convert:mapping`
+- **sf2_translation_update**: `translation:update`
+- **sf2_twig_lint**: `twig:lint`
 
 ## Author
 - [Florian Eckerstorfer](http://florian.ec) ([Twitter](http://twitter.com/Florian_), [App.net](http://app.net/florian))

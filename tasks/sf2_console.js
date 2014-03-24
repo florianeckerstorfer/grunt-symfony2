@@ -66,4 +66,172 @@ module.exports = function (grunt) {
         prepareCmd('cache:warmup', args, options, this.async());
     });
 
+    grunt.registerMultiTask('sf2_assetic_dump', 'Grunt task for running Symfony2 assetic:dump commands.', function () {
+        var args = this.data.args || {},
+            options = this.options();
+
+        prepareCmd('assetic:dump', args, options, this.async());
+    });
+
+    grunt.registerMultiTask(
+        'sf2_assets_install',
+        'Grunt task for running Symfony2 assets:install commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('assets:install', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask('sf2_twig_lint', 'Grunt task for running Symfony2 twig:linkt commands.', function () {
+        var args = this.data.args || {},
+            options = this.options();
+
+        prepareCmd('twig:lint', args, options, this.async());
+    });
+
+    grunt.registerMultiTask(
+        'sf2_translation_update',
+        'Grunt task for running Symfony2 translation:update commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('translation:update', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_orm_convert_mapping',
+        'Grunt task for running Symfony2 orm:convert:mapping commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('orm:convert:mapping', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_cache_clear_metadata',
+        'Grunt task for running Symfony2 doctrine:cache:clear-metadata commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:cache:clear-metadata', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_cache_clear_query',
+        'Grunt task for running Symfony2 doctrine:cache:query commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:cache:query', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_cache_clear_result',
+        'Grunt task for running Symfony2 doctrine:cache:result commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:cache:result', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_database_create',
+        'Grunt task for running Symfony2 doctrine:database:create commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:database:create', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_database_drop',
+        'Grunt task for running Symfony2 doctrine:database:drop commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:database:drop', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_ensure_production_settings',
+        'Grunt task for running Symfony2 doctrine:ensure-production-settings commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:ensure-production-settings', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_fixtures_load',
+        'Grunt task for running Symfony2 doctrine:fixtures:load commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:fixtures:load', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_schema_create',
+        'Grunt task for running Symfony2 doctrine:schema:create commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:schema:create', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_schema_drop',
+        'Grunt task for running Symfony2 doctrine:schema:drop commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:schema:drop', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_schema_update',
+        'Grunt task for running Symfony2 doctrine:schema:update commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:schema:update', args, options, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2_doctrine_schema_validate',
+        'Grunt task for running Symfony2 doctrine:schema:validate commands.',
+        function () {
+            var args = this.data.args || {},
+                options = this.options();
+
+            prepareCmd('doctrine:schema:validate', args, options, this.async());
+        }
+    );
+
 };
