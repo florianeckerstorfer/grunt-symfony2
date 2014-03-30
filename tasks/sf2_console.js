@@ -83,7 +83,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerMultiTask('sf2-assetic-dump', 'Grunt task for running Symfony2 assetic:dump commands.', function () {
-        var args = {},
+        var args = { write_to: this.data.write_to || '' },
             argOptions = this.data.args || {},
             options = this.options(),
             target = this.target || '';
@@ -95,7 +95,7 @@ module.exports = function (grunt) {
         'sf2-assets-install',
         'Grunt task for running Symfony2 assets:install commands.',
         function () {
-            var args = {},
+            var args = { target: this.data.target || '' },
                 argOptions = this.data.args || {},
                 options = this.options(),
                 target = this.target || '';
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask('sf2-twig-lint', 'Grunt task for running Symfony2 twig:linkt commands.', function () {
-        var args = {},
+        var args = { filename: this.data.filename || '' },
             argOptions = this.data.args || {},
             options = this.options(),
             target = this.target || '';
@@ -117,7 +117,7 @@ module.exports = function (grunt) {
         'sf2-translation-update',
         'Grunt task for running Symfony2 translation:update commands.',
         function () {
-            var args = {},
+            var args = { locale: this.data.locale, bundle: this.data.bundle },
                 argOptions = this.data.args || {},
                 options = this.options(),
                 target = this.target || '';
