@@ -48,7 +48,7 @@ module.exports = function (grunt) {
             execCmd('php ' + bin + ' ' + cmd, done, execOpts);
         };
 
-    grunt.registerMultiTask('sf2_console', 'Grunt task for running Symfony2 commands.', function () {
+    grunt.registerMultiTask('sf2-console', 'Grunt task for running Symfony2 commands.', function () {
         var cmd = this.data.cmd || '',
             args = this.data.args || {},
             options = this.options(),
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         prepareCmd(cmd, args, options, target, this.async());
     });
 
-    grunt.registerMultiTask('sf2_cache_clear', 'Grunt task for running Symfony2 cache:clear commands.', function () {
+    grunt.registerMultiTask('sf2-cache-clear', 'Grunt task for running Symfony2 cache:clear commands.', function () {
         var args = this.data.args || {},
             options = this.options(),
             target = this.target || '';
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         prepareCmd('cache:clear', args, options, target, this.async());
     });
 
-    grunt.registerMultiTask('sf2_cache_warmup', 'Grunt task for running Symfony2 cache:warmup commands', function () {
+    grunt.registerMultiTask('sf2-cache-warmup', 'Grunt task for running Symfony2 cache:warmup commands', function () {
         var args = this.data.args || {},
             options = this.options(),
             target = this.target || '';
@@ -73,7 +73,7 @@ module.exports = function (grunt) {
         prepareCmd('cache:warmup', args, options, target, this.async());
     });
 
-    grunt.registerMultiTask('sf2_assetic_dump', 'Grunt task for running Symfony2 assetic:dump commands.', function () {
+    grunt.registerMultiTask('sf2-assetic-dump', 'Grunt task for running Symfony2 assetic:dump commands.', function () {
         var args = this.data.args || {},
             options = this.options(),
             target = this.target || '';
@@ -82,7 +82,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerMultiTask(
-        'sf2_assets_install',
+        'sf2-assets-install',
         'Grunt task for running Symfony2 assets:install commands.',
         function () {
             var args = this.data.args || {},
@@ -93,7 +93,7 @@ module.exports = function (grunt) {
         }
     );
 
-    grunt.registerMultiTask('sf2_twig_lint', 'Grunt task for running Symfony2 twig:linkt commands.', function () {
+    grunt.registerMultiTask('sf2-twig-lint', 'Grunt task for running Symfony2 twig:linkt commands.', function () {
         var args = this.data.args || {},
             options = this.options(),
             target = this.target || '';
@@ -102,7 +102,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerMultiTask(
-        'sf2_translation_update',
+        'sf2-translation-update',
         'Grunt task for running Symfony2 translation:update commands.',
         function () {
             var args = this.data.args || {},
@@ -114,7 +114,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_orm_convert_mapping',
+        'sf2-orm-convert-mapping',
         'Grunt task for running Symfony2 orm:convert:mapping commands.',
         function () {
             var args = this.data.args || {},
@@ -126,7 +126,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_cache_clear_metadata',
+        'sf2-doctrine-cache-clear-metadata',
         'Grunt task for running Symfony2 doctrine:cache:clear-metadata commands.',
         function () {
             var args = this.data.args || {},
@@ -138,31 +138,31 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_cache_clear_query',
+        'sf2-doctrine-cache-clear-query',
         'Grunt task for running Symfony2 doctrine:cache:query commands.',
         function () {
             var args = this.data.args || {},
                 options = this.options(),
                 target = this.target || '';
 
-            prepareCmd('doctrine:cache:query', args, options, target, this.async());
+            prepareCmd('doctrine:cache:clear-query', args, options, target, this.async());
         }
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_cache_clear_result',
+        'sf2-doctrine-cache-clear-result',
         'Grunt task for running Symfony2 doctrine:cache:result commands.',
         function () {
             var args = this.data.args || {},
                 options = this.options(),
                 target = this.target || '';
 
-            prepareCmd('doctrine:cache:result', args, options, target, this.async());
+            prepareCmd('doctrine:cache:clear-result', args, options, target, this.async());
         }
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_database_create',
+        'sf2-doctrine-database-create',
         'Grunt task for running Symfony2 doctrine:database:create commands.',
         function () {
             var args = this.data.args || {},
@@ -174,7 +174,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_database_drop',
+        'sf2-doctrine-database-drop',
         'Grunt task for running Symfony2 doctrine:database:drop commands.',
         function () {
             var args = this.data.args || {},
@@ -186,7 +186,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_ensure_production_settings',
+        'sf2-doctrine-ensure-production-settings',
         'Grunt task for running Symfony2 doctrine:ensure-production-settings commands.',
         function () {
             var args = this.data.args || {},
@@ -198,7 +198,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_fixtures_load',
+        'sf2-doctrine-fixtures-load',
         'Grunt task for running Symfony2 doctrine:fixtures:load commands.',
         function () {
             var args = this.data.args || {},
@@ -210,7 +210,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_schema_create',
+        'sf2-doctrine-schema-create',
         'Grunt task for running Symfony2 doctrine:schema:create commands.',
         function () {
             var args = this.data.args || {},
@@ -222,7 +222,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_schema_drop',
+        'sf2-doctrine-schema-drop',
         'Grunt task for running Symfony2 doctrine:schema:drop commands.',
         function () {
             var args = this.data.args || {},
@@ -234,7 +234,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_schema_update',
+        'sf2-doctrine-schema-update',
         'Grunt task for running Symfony2 doctrine:schema:update commands.',
         function () {
             var args = this.data.args || {},
@@ -246,7 +246,7 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
-        'sf2_doctrine_schema_validate',
+        'sf2-doctrine-schema-validate',
         'Grunt task for running Symfony2 doctrine:schema:validate commands.',
         function () {
             var args = this.data.args || {},
