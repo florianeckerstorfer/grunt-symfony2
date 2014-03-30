@@ -35,14 +35,10 @@ module.exports = function(grunt) {
             },
             console_with_task_and_option: {
                 cmd: 'cache:clear',
-                args: {
-                    env: 'prod'
-                }
+                args: { env: 'prod' }
             },
             console_with_option: {
-                args: {
-                    'version': true
-                }
+                args: { 'version': true }
             },
             options: {
                 bin: 'test/fixtures/console',
@@ -63,9 +59,7 @@ module.exports = function(grunt) {
         },
         'sf2-cache-clear': {
             dev: {
-                args: {
-                    env: 'dev'
-                }
+                args: { env: 'dev' }
             },
             options: {
                 bin: 'test/fixtures/console',
@@ -73,9 +67,7 @@ module.exports = function(grunt) {
         },
         'sf2-cache-warmup': {
             dev: {
-                args: {
-                    env: 'dev'
-                }
+                args: { env: 'dev' }
             },
             prod: {},
             options: {
@@ -138,6 +130,11 @@ module.exports = function(grunt) {
         },
         'sf2-doctrine-schema-update': {
             doctrine_schema_update: {},
+            doctrine_schema_update_with_force: {
+                args: {
+                    'force': true
+                }
+            },
             options: {
                 bin: 'test/fixtures/console'
             }
@@ -149,7 +146,10 @@ module.exports = function(grunt) {
             }
         },
         'sf2-orm-convert-mapping': {
-            orm_convert_mapping: {},
+            orm_convert_mapping: {
+                'to-type': 'xml',
+                'dest-path': 'src/Acme/DemoBundle/Entity'
+            },
             options: {
                 bin: 'test/fixtures/console'
             }

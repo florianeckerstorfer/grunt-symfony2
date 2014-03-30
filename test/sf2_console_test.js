@@ -177,6 +177,14 @@ exports.sf2_console = {
 
         test.done();
     },
+    doctrine_schema_update_with_force: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_schema_update_force').trim();
+        test.equal(actual, 'doctrine:schema:update --force', 'should run doctrine:schema:update command with --force option.');
+
+        test.done();
+    },
     doctrine_schema_validate: function (test) {
         test.expect(1);
 
@@ -188,8 +196,8 @@ exports.sf2_console = {
     orm_convert_mapping: function (test) {
         test.expect(1);
 
-        var actual = grunt.file.read('tmp/orm_convert_mapping').trim();
-        test.equal(actual, 'orm:convert:mapping', 'should run orm:convert:mapping command.');
+        var actual = grunt.file.read('tmp/orm_convert_mapping_xml_src_Acme_DemoBundle_Entity').trim();
+        test.equal(actual, 'orm:convert:mapping xml src/Acme/DemoBundle/Entity', 'should run orm:convert:mapping command.');
 
         test.done();
     },

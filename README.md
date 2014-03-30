@@ -25,19 +25,17 @@ The `sf2-console` task let's you execute arbitrary commands of your Symfony2 app
 In your project's Gruntfile, add a section named `sf2-console` to the data object passed into `grunt.initConfig()`.
 
 ```js
-grunt.initConfig({
-    'sf2-console': {
-        options: {
-            // Task-specific options go here.
-        },
-        your_target: {
-            cmd: 'command:name',
-            args: {
-                // Arguments
-            }
+'sf2-console': {
+    options: {
+        // Task-specific options go here.
+    },
+    your_target: {
+        cmd: 'command:name',
+        args: {
+            // Arguments
         }
     }
-});
+}
 ```
 
 ### Options
@@ -54,36 +52,32 @@ Path to console application that you want to use.
 `grunt-symfony2` uses by default `app/console` as binary to execute commands.
 
 ```js
-grunt.initConfig({
-    'sf2-console': {
-        options: {},
-        cache_clear_prod: {
-            cmd: 'cache:clear',
-            args: {
-                env: 'prod'
-            }
+'sf2-console': {
+    options: {},
+    cache_clear_prod: {
+        cmd: 'cache:clear',
+        args: {
+            env: 'prod'
         }
     }
-});
+}
 ```
 
 #### Custom Options
 If you want to use a custom binary, you can change the `bin` option.
 
 ```js
-grunt.initConfig({
-    'sf2-console': {
-        options: {
-            bin: 'app/sf2console'
-        },
-        cache_clear_prod: {
-            cmd: 'cache:clear',
-            args: {
-                env: 'prod'
-            }
+'sf2-console': {
+    options: {
+        bin: 'app/sf2console'
+    },
+    cache_clear_prod: {
+        cmd: 'cache:clear',
+        args: {
+            env: 'prod'
         }
-  }
-});
+    }
+}
 ```
 
 ### Environment Auto Detection
@@ -95,12 +89,10 @@ The execution environment of a task can be auto detected based on the target. If
 The following task executes automatically in `prod` environment.
 
 ```js
-grunt.initConfig({
-    'sf2-cache-clear': {
-        options: {},
-        prod: {}
-    }
-});
+'sf2-cache-clear': {
+    options: {},
+    prod: {}
+}
 ```
 
 ## Other "sf-*" tasks
@@ -126,6 +118,16 @@ of the environment are also supported. Currently we support the following comman
 - **sf2-orm-convert-mapping**: `orm:convert:mapping`
 - **sf2-translation-update**: `translation:update`
 - **sf2-twig-lint**: `twig:lint`
+
+### Examples
+
+```js
+'sf2-doctrine-schema-update': {
+    dev: {
+        args: { force: true}
+    }
+}
+```
 
 ## Author
 - [Florian Eckerstorfer](http://florian.ec) ([Twitter](http://twitter.com/Florian_), [App.net](http://app.net/florian))

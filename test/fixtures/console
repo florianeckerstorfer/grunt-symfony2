@@ -8,5 +8,6 @@ $args = implode(' ', array_slice($_SERVER['argv'], 1));
 if (false === file_exists(TMP_DIR)) {
     mkdir(TMP_DIR);
 }
-$filename = trim(preg_replace('/(-|\s|=|:)+/', '_', trim($args)), '_');
+
+$filename = trim(preg_replace('/(-|\s|=|:|\/|")+/', '_', trim($args)), '_');
 file_put_contents(TMP_DIR.'/'.$filename, $args);
