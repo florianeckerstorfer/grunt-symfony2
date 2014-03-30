@@ -155,7 +155,10 @@ module.exports = function(grunt) {
             }
         },
         'sf2-translation-update': {
-            orm_translation_update: {},
+            orm_translation_update: {
+                locale: 'en',
+                bundle: 'AcmeDemoBundle'
+            },
             options: {
                 bin: 'test/fixtures/console'
             }

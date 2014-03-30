@@ -204,8 +204,8 @@ exports.sf2_console = {
     translation_update: function (test) {
         test.expect(1);
 
-        var actual = grunt.file.read('tmp/translation_update').trim();
-        test.equal(actual, 'translation:update', 'should run translation:update command.');
+        var actual = grunt.file.read('tmp/translation_update_en_AcmeDemoBundle').trim();
+        test.equal(actual, 'translation:update en AcmeDemoBundle', 'should run translation:update command.');
 
         test.done();
     },
