@@ -121,10 +121,26 @@ of the environment are also supported. Currently we support the following comman
 
 ### Examples
 
+Set the value to `true` if you want to use an option without value:
+
 ```js
 'sf2-doctrine-schema-update': {
     dev: {
-        args: { force: true}
+        args: { force: true }
+    }
+}
+```
+
+It's a little bit confusing, but you have to put arguments (speaking in Symfony2 console terms) outside of the `args` array.
+
+```js
+'sf2-orm-convert-mapping': {
+    dev: {
+        'to-type': 'xml',
+        'dest-path': 'src/Acme/DemoBundle/Entity'
+    },
+    options: {
+        bin: 'test/fixtures/console'
     }
 }
 ```
@@ -136,6 +152,10 @@ of the environment are also supported. Currently we support the following comman
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+### Version 0.3 (30 March 2014)
+
+- Added support for arguments in tasks
 
 ### Version 0.2 (30 March 2014)
 
