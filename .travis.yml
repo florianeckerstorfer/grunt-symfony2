@@ -1,3 +1,5 @@
+# Travis CI does not support multiple languages, but Nodejs is also installed on PHP environments (but PHP is not
+# installed on Nodejs environments, therefore use a PHP machine and to setup and execution manually.
 language: php
 php:
     5.5

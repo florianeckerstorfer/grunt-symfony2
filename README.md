@@ -2,6 +2,8 @@
 
 > Grunt plugin for running Symfony2 commands.
 
+[![Build Status](https://travis-ci.org/florianeckerstorfer/grunt-symfony2.svg?branch=master)](https://travis-ci.org/florianeckerstorfer/grunt-symfony2)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.4`
 
