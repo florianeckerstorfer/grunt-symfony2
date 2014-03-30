@@ -26,7 +26,7 @@ In your project's Gruntfile, add a section named `sf2-console` to the data objec
 
 ```js
 grunt.initConfig({
-    sf2-console: {
+    'sf2-console': {
         options: {
             // Task-specific options go here.
         },
@@ -96,7 +96,7 @@ The following task executes automatically in `prod` environment.
 
 ```js
 grunt.initConfig({
-    sf2-cache-clear: {
+    'sf2-cache-clear': {
         options: {},
         prod: {}
     }
