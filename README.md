@@ -103,8 +103,8 @@ grunt.initConfig({
 });
 ```
 
-## Other "sf_*" tasks
-`grunt_symfony2` contains additional tasks that allow you to quickly execute Symfony2 commands from grunt. The tasks
+## Other "sf-*" tasks
+`grunt-symfony2` contains additional tasks that allow you to quickly execute Symfony2 commands from grunt. The tasks
 work exactly like the `sf2-console` task, you just don't need to provide the `cmd` option. Arguments and auto detection
 of the environment are also supported. Currently we support the following commands:
 
