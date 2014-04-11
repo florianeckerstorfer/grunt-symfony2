@@ -14,7 +14,9 @@ module.exports = function (grunt) {
         execCmd = function (cmd, cb, execOpts) {
             grunt.verbose.writeln('Exec: ' + cmd);
             exec(cmd, execOpts, function (err, stdout, stderr) {
-                grunt.verbose.writeln(stdout);
+                if (stdout) {
+                    grunt.log.writeln(stdout);
+                }
                 if (stderr) {
                     grunt.fatal(stderr);
                 }
