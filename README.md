@@ -113,6 +113,13 @@ of the environment are also supported. Currently we support the following comman
 - **sf2-doctrine-database-drop**: `doctrine:database:drop`
 - **sf2-doctrine-ensure-production-settings**: `doctrine:ensure-production-settings`
 - **sf2-doctrine-fixtures-load**: `doctrine:fixtures:load`
+- **sf2-doctrine-migrations-diff**: `doctrine:migrations:diff`
+- **sf2-doctrine-migrations-execute**: `doctrine:migrations:execute`
+- **sf2-doctrine-migrations-generate**: `doctrine:migrations:generate`
+- **sf2-doctrine-migrations-latest**: `doctrine:migrations:latest`
+- **sf2-doctrine-migrations-migrate**: `doctrine:migrations:migrate`
+- **sf2-doctrine-migrations-status**: `doctrine:migrations:status`
+- **sf2-doctrine-migrations-version**: `doctrine:migrations:version`
 - **sf2-doctrine-schema-create**: `doctrine:schema:create`
 - **sf2-doctrine-schema-drop**: `doctrine:schema:drop`
 - **sf2-doctrine-schema-update**: `doctrine:schema:update`
