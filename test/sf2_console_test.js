@@ -153,6 +153,62 @@ exports.sf2_console = {
 
         test.done();
     },
+    doctrine_migrations_diff: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_diff').trim();
+        test.equal(actual, 'doctrine:migrations:diff', 'should run doctrine:migrations:diff command.');
+
+        test.done();
+    },
+    doctrine_migrations_execute: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_execute').trim();
+        test.equal(actual, 'doctrine:migrations:execute', 'should run doctrine:migrations:execute command.');
+
+        test.done();
+    },
+    doctrine_migrations_generate: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_generate').trim();
+        test.equal(actual, 'doctrine:migrations:generate', 'should run doctrine:migrations:generate command.');
+
+        test.done();
+    },
+    doctrine_migrations_latest: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_latest').trim();
+        test.equal(actual, 'doctrine:migrations:latest', 'should run doctrine:migrations:latest command.');
+
+        test.done();
+    },
+    doctrine_migrations_migrate: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_migrate').trim();
+        test.equal(actual, 'doctrine:migrations:migrate', 'should run doctrine:migrations:migrate command.');
+
+        test.done();
+    },
+    doctrine_migrations_status: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_status').trim();
+        test.equal(actual, 'doctrine:migrations:status', 'should run doctrine:migrations:status command.');
+
+        test.done();
+    },
+    doctrine_migrations_version: function (test) {
+        test.expect(1);
+
+        var actual = grunt.file.read('tmp/doctrine_migrations_version').trim();
+        test.equal(actual, 'doctrine:migrations:version', 'should run doctrine:migrations:version command.');
+
+        test.done();
+    },
     doctrine_schema_create: function (test) {
         test.expect(1);
 

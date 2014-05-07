@@ -233,6 +233,97 @@ module.exports = function (grunt) {
     );
 
     grunt.registerMultiTask(
+        'sf2-doctrine-migrations-diff',
+        'Grunt task for running Symfony2 doctrine:migrations:diff commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:diff', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2-doctrine-migrations-execute',
+        'Grunt task for running Symfony2 doctrine:migrations:execute commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:execute', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2-doctrine-migrations-generate',
+        'Grunt task for running Symfony2 doctrine:migrations:generate commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:generate', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2-doctrine-migrations-latest',
+        'Grunt task for running Symfony2 doctrine:migrations:latest commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:latest', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2-doctrine-migrations-migrate',
+        'Grunt task for running Symfony2 doctrine:migrations:migrate commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:migrate', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2-doctrine-migrations-status',
+        'Grunt task for running Symfony2 doctrine:migrations:status commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:status', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
+        'sf2-doctrine-migrations-version',
+        'Grunt task for running Symfony2 doctrine:migrations:version commands.',
+        function () {
+            var args = {},
+                argOptions = this.data.args || {},
+                options = this.options(),
+                target = this.target || '';
+
+            prepareCmd('doctrine:migrations:version', args, argOptions, options, target, this.async());
+        }
+    );
+
+    grunt.registerMultiTask(
         'sf2-doctrine-schema-create',
         'Grunt task for running Symfony2 doctrine:schema:create commands.',
         function () {

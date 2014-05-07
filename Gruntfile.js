@@ -116,6 +116,48 @@ module.exports = function(grunt) {
                 bin: 'test/fixtures/console'
             }
         },
+        'sf2-doctrine-migrations-diff': {
+            doctrine_migrations_diff: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+        'sf2-doctrine-migrations-execute': {
+            doctrine_migrations_execute: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+        'sf2-doctrine-migrations-generate': {
+            doctrine_migrations_generate: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+        'sf2-doctrine-migrations-latest': {
+            doctrine_migrations_latest: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+        'sf2-doctrine-migrations-migrate': {
+            doctrine_migrations_migrate: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+        'sf2-doctrine-migrations-status': {
+            doctrine_migrations_status: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
+        'sf2-doctrine-migrations-version': {
+            doctrine_migrations_version: {},
+            options: {
+                bin: 'test/fixtures/console'
+            }
+        },
         'sf2-doctrine-schema-create': {
             doctrine_schema_create: {},
             options: {
@@ -218,6 +260,13 @@ module.exports = function(grunt) {
             'sf2-doctrine-database-drop',
             'sf2-doctrine-ensure-production-settings',
             'sf2-doctrine-fixtures-load',
+            'sf2-doctrine-migrations-diff',
+            'sf2-doctrine-migrations-execute',
+            'sf2-doctrine-migrations-generate',
+            'sf2-doctrine-migrations-latest',
+            'sf2-doctrine-migrations-migrate',
+            'sf2-doctrine-migrations-status',
+            'sf2-doctrine-migrations-version',
             'sf2-doctrine-schema-create',
             'sf2-doctrine-schema-drop',
             'sf2-doctrine-schema-update',
